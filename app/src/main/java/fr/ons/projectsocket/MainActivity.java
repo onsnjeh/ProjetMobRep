@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private String message6="";
     private String message7="";
 //bd
+  // les questions dans la BD Q1,Q2...
    private String Q1;
     private String Q2;
     private String Q3;
