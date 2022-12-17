@@ -16,10 +16,10 @@ import java.net.Socket;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-  /*  private static Formulaire formulaire;
+  private static Formulaire formulaire;
     private static AccessBD BD;
 
-    private static String nonFichier = "saveFormulaire";*/
+    private static String nonFichier = "saveFormulaire";
     // declaring required variables
     private Socket client;
     private PrintWriter printwriter;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private String message6="";
     private String message7="";
 //bd
-  /*  private String Q1;
+   private String Q1;
     private String Q2;
     private String Q3;
     private String Q4;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private String Q6;
     private String Q7;
     private String id;
-    private Context context;*/
+    private Context context;
 
     private static InputStreamReader inputStreamReader;
     private static BufferedReader bufferedReader;
@@ -59,12 +59,12 @@ public class MainActivity extends AppCompatActivity {
         textField6 = (EditText) findViewById(R.id.editText6);
         textField7 = (EditText) findViewById(R.id.editText7);
 //bd
-       /* BD=new AccessBD(context);
+       BD=new AccessBD(context);
         formulaire=BD.RécupérerDernier();
         formulaire=new Formulaire(id,Q1,Q2,Q3,Q4,Q5,Q6,Q7);
             // Serializer.serialize(nonFichier, players, context);
             BD.ajouter(formulaire);
-*/
+
 
         // reference to the send button
         button = (Button) findViewById(R.id.button1);
@@ -87,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
                 // start the Thread to connect to server
               new Thread(new ClientThread(message1)).start();
-             //new Thread(new ClientThread(message2)).start();
-                //new Thread(new ClientThread(message3)).start();
-              //  new Thread(new ClientThread(message4)).start();
-               //new Thread(new ClientThread(message5)).start();
-               /*  new Thread(new ClientThread(message6)).start();
-                new Thread(new ClientThread(message7)).start();*/
+             new Thread(new ClientThread(message2)).start();
+                new Thread(new ClientThread(message3)).start();
+                new Thread(new ClientThread(message4)).start();
+               new Thread(new ClientThread(message5)).start();
+                 new Thread(new ClientThread(message6)).start();
+                new Thread(new ClientThread(message7)).start();
 
 
 
